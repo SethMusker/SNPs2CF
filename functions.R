@@ -270,7 +270,7 @@ SNPs2CF <- function(wd=getwd(), seqMatrix,
       if(n.resampled > 1){
         cat("\tresampling =", n.resampled,"\n");
       }
-      if(n.resampled == 100){ # in case the while loop gets stock for ever when randomly sampling
+      if(n.resampled == 1000){ # in case the while loop gets stuck for ever when randomly sampling
         if(n.quartets == "all"){
           error <- paste("Warning: No informative SNPs found for the species quartet: ", paste(random.indQuartet, collapse=" "), ". This quartet was not saved in the output table\n", sep="");
         }else{
